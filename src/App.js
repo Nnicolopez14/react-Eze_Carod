@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar/navbar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import Button from './components/Button';
+import { useState } from 'react';
+import Count from './components/Count';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  console.log("Se renderiza app")
+
+  return(
+    <>
+    <NavBar />
+
+    <ItemListContainer greeting="bienvenido a mi tienda" />
+    </>
+  )
 }
 
 export default App;
